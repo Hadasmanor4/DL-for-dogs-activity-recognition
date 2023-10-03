@@ -1,7 +1,7 @@
 # DL-for-dogs-activity-recognition
 Hadas Manor and Hadar Shloosh's project about dogs' activity recognition using DL  
 * photo  
-# Introduction
+# Introduction 
 Adopting dogs from animal shelters plays a crucial role in addressing multiple societal and ethical concerns.
 It aids in curbing the issue of pet overpopulation by providing homes to dogs that might otherwise contribute to the strain on shelter resources or face the risk of euthanasia due to lack of space.
 Despite the many successful instances of matching dogs with families, there exist instances where the compatibility between a dog and its adopted family proves challenging.These mismatches can lead to stress for both the family and the dog, potentially resulting in the dog being returned to the shelter. Data from animal shelters reveal that a significant percentage of returned dogs are due to issues related to behavior, health concerns, or simply a mismatch in lifestyle or energy levels between the dog and the adopting family.

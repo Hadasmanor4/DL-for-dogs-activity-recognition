@@ -27,7 +27,7 @@ In our code we used VGG19 which is a pre- trained CNN that includes 19 layers. T
 
 source:https://www.researchgate.net/figure/Illustration-of-fine-tuned-VGG19-pre-trained-CNN-model_fig1_342815128
 
-This last fully connected layer was replaced with the layers we added to our model, and only these newly added layers were subjected to training. By doing so, we were able to leverage the pre-trained VGG model's learned features while fine-tuning the specific layers necessary for our task.
+In this approach, we preserved the weights of all the layers in the VGG network except for the final fully connected layer. This last fully connected layer was replaced with the layers we added to our model, and only these newly added layers were subjected to training. By doing so, we were able to leverage the pre-trained VGG model's learned features while fine-tuning the specific layers necessary for our task.
 
 # YOLO- you only look once
 Object detection algorithm that works by dividing an input image into a grid and making predictions about objects within each grid cell.

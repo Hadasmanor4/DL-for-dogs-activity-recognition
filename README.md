@@ -79,18 +79,18 @@ During the process, we practiced and trained our model in various ways to achiev
 # First practice-overfit 
 After we built our net, we will see the loss function and accuracy results- at the end of the training:
 * photo
+  
+Running our model on the test images gives us the accuracy of 96.435%.
+We have identified overfitting in our model. 
+We believe that this issue arises from our data splitting approach, where we divided the data into training, validation, and test sets based on individual frames.
+Since each video contains numerous similar frames, there is a significant likelihood that the model trains on images that closely resemble those in the test set.
+
+To fix the overfit, we split the data by video and not randomly by images.
 
 
-![image](https://github.com/hadarshloosh/DL-project/assets/129359070/aad74286-740a-4d6e-98ef-fa4457833c01)
 
-![image](https://github.com/hadarshloosh/DL-project/assets/129359070/9e6f650a-30d8-4253-b9e1-074b8beec268)
 
-**model train accuracy: 86.307%**
 
-**model test accuracy: 84.88098%**
-
-We got those results with the following hyper parameters (in addition to the ones that we train our model with):
-5 epocs, batch size: 128, optimizer: Adam. Learning rate 1⋅𝑒^(−3)
 
 **model test accuuracy after adding **gaussian noise**: 80.532**
 

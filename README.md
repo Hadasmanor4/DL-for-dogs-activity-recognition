@@ -36,7 +36,7 @@ This approach allows YOLO to achieve real-time object detection with impressive 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b6394a1d-dbcc-48c4-a11f-0e96cca337dc)
   
 We used the YOLOv8 version in which designed to be fast, accurate, and easy to use.
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/9a0a3f27-fbfb-4e8c-99e8-7569ae1c5ffd)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/50e2433f-0598-4a18-890a-118dc4861537)
 
 # Confusion matrix
 A Confusion matrix is an N x N matrix used for evaluating the performance of a classification model.

@@ -44,7 +44,7 @@ A confusion matrix is a tabular summary of the number of correct and incorrect p
 It can be used to evaluate the performance of a classification model through the calculation of performance metrics like accuracy, precision, recall, and F1-score.
 We use the confusion matrix to see the prediction results of our model on our dataset. Eventually it helps us to see that we have imbalanced dataset and to get some conclusions on how to move on and improve the model.
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5bc9d91e-a8a2-4107-82ce-4cc506842dfc)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/1c673abb-952c-4d37-825e-602b5cec3ff1)
 
 source :  https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5
 * F-measure/F1-score: The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall. F1 score sort of maintains a balance between the precision and recall for your classifier.
@@ -56,7 +56,7 @@ The images considered as input are three consecutive grayscale images (obtained 
 By putting the three images together (like in RGB method) we can detect movement:
 if we will see clear image, we will know that there wasn’t any movement. otherwise, if the image is blurry, there is probably a change between the images that can suggest that there was movement.
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/f8570c15-efd7-4115-bc66-f9b7af9de9b5)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ff701596-2667-46f6-8f48-5cdc415a710c)
   
 source: https://www.nature.com/articles/s41598-023-41774-2
 

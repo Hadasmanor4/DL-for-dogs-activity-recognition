@@ -147,12 +147,12 @@ We can observe an improvement in the F1 score, but there remains some confusion 
 
 For instance, when examining an image labeled as "resting":
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/1088da74-a4b6-4a4e-9578-cfd61f667b88)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/1421e152-17af-44b1-ae84-862f975e4e13)
 
 And for walking label we can see blur, unclear image due to the movement of the dog.
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ef027b9e-564b-4f5e-a57e-5880211cd0cc)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/eef0c485-e2fa-47ab-b364-cc7e56bc4ebf)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/53f6ac42-2089-427b-b2f1-0810df80b27f)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/fa987b37-c754-4931-acd4-ceac99d1f6aa)
 
 # Fourth practice- GrayST
 
@@ -169,7 +169,7 @@ As we can see, there is an improvement at the score.
 
 After training the model on our data, we now want to obtain a prediction for each video. We created a table that processes the video frame by frame, using the model to generate predictions for each image. Subsequently, we select the prediction with the highest score, which corresponds to the one with the most images that were labeled and assign that prediction to the video.
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/bf9c2f6f-00e8-43e3-97c2-376ae641545d)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/fb8830e7-1bb2-42d3-a708-6aee82faf750)
 
 Running our model on the test video gives us the accuracy 78.78%.
 

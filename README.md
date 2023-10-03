@@ -133,6 +133,7 @@ To address this issue, we have made the decision to balance our data using under
 Undersampling is a technique to balance uneven datasets by keeping all the data in the minority class and decreasing the size of the majority class. It is one of several techniques data scientists can use to extract more accurate information from originally imbalanced datasets.
 
 Additionally, given that our model lacks sufficient data to effectively recognize when a dog is in a sitting position (class 1), we have chosen not to include this class in our dataset.
+
 To determine how many images to extract from each video (i.e., how many seconds of video to utilize) to achieve a balanced dataset, we have created a histogram of the number of images per video.
 This histogram reveals that most of our videos contain fewer than 500 images each.
 

@@ -62,9 +62,9 @@ source: https://www.nature.com/articles/s41598-023-41774-2
 
 # The dataset
 Our data set includes 662 labeled videos (few seconds each), divided to 8 different groups (resting, sitting, walking, standing (each contains 2 groups, on the floor and on the bench)). After converting the videos into images, we've got 361,502 images.
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/470ef022-9980-4724-8431-7d78f5737931)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/a048c015-bd42-4215-92c7-66b87f8314d8)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/e1145616-c3ee-4a40-86a3-8b76b2791b20)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b42c4f8f-65ae-4f88-8de9-e22735026c56)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/c2289e12-3a6d-45f2-8f29-674acacb588b)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/abc92c00-6344-42c6-b1c7-f6456b29ab14)
 
 # The Process 
 Our initial step involved converting our video data into images.

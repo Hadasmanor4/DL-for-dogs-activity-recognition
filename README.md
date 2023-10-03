@@ -83,6 +83,7 @@ To enhance the accuracy of the model, we repeated the process of acquiring more 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ff1a5d19-1034-48d8-932a-ac184fcc78cb)
 
 Then, we downloaded our data to our python code and trained it with augmentations: noise- up to 3% of pixels and cutout- 5 boxes with 10% size each.
+
 Then we cropped the images using the bounding box.
 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5b7313f6-4d6f-4722-aaad-746bcf16ec5d)

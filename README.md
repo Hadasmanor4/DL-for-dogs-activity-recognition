@@ -71,7 +71,9 @@ Our data set includes 662 labeled videos (few seconds each), divided to 8 differ
 
 # The Process 
 Our initial step involved converting our video data into images.
+
 We utilized YOLOv3, an object detection framework, to isolate and crop the dog from each image. YOLO, which stands for "You Only Look Once," employs a deep convolutional neural network to detect objects within images. Unfortunately, both YOLOv3 and YOLOv8 couldn't detect the dog in the images (we assume that it's because our data set is dogs behind bars, which coco128 aren't familiar with).
+
 To address this issue, we manually cropped images from our dataset that showcased dogs behind bars.
 We performed a brief training session on the "roboflow" platform and subsequently integrated the newly acquired data into our project code. We continued training the YOLOv8 model using this augmented dataset to improve its ability to detect dogs in the context of being behind bars.
 To enhance the accuracy of the model, we repeated the process of acquiring more data and fine-tuning the YOLOv8 model. This iterative approach aimed to provide the model with additional training examples and improve its performance in identifying dogs behind bars.

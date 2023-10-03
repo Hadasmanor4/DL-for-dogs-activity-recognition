@@ -125,7 +125,7 @@ Running our model on the test images gives us the accuracy of 94.899%.
 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/e874fb7d-e0ae-48e2-a66f-da0c5aa21d7d)
 
-Here, we have valuable insights into our model and its performance. It's evident that the unbalanced nature of our data is impacting our model's training
+Here, we have valuable insights into our model and its performance. It's evident that the unbalanced nature of our data is impacting our model's training.
 This is apparent because there are approximately 49,000 images in class 0, no images in class 1, 21,000 in class 2, and 2,700 in class 3 for the test dataset.
 As a result, the model tends to favor predictions in favor of class 0, leading to a high probability of correct predictions within our current data distribution.
 To address this issue, we have made the decision to balance our data using undersampling. 

@@ -1,6 +1,10 @@
 # DL-for-dogs-activity-recognition
-Hadas Manor and Hadar Shloosh's project about dogs' activity recognition using DL  
-* photo  
+**Hadar Shloosh and Hadas Manor's project about dogs' activity recognition using DL**
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b8cdad60-957c-4bc4-a8e5-5a2a8e195df6)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b1e3c946-eb01-4beb-b7b4-623b570e4ed4)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/0800814c-5795-4b45-a30d-056515bc89a5)
+
 # Introduction 
 Adopting dogs from animal shelters plays a crucial role in addressing multiple societal and ethical concerns.
 It aids in curbing the issue of pet overpopulation by providing homes to dogs that might otherwise contribute to the strain on shelter resources or face the risk of euthanasia due to lack of space.
@@ -18,7 +22,8 @@ Secondly, to be able to have a better match between dogs and potential adopters.
 
 In our code we used VGG19 which is a pre- trained CNN that includes 19 layers. The model was trained with more than a million images from the ImageNet database and can classify images into 1000 object categories
 ![image](https://github.com/hadarshloosh/DL-project/assets/129359070/bbb9dc64-8e9f-43cd-9439-5cbf737ff61c)
-source: https://www.researchgate.net/figure/Illustration-of-fine-tuned-VGG19-pre-trained-CNN-model_fig1_342815128
+
+source:https://www.researchgate.net/figure/Illustration-of-fine-tuned-VGG19-pre-trained-CNN-model_fig1_342815128
 
 This last fully connected layer was replaced with the layers we added to our model, and only these newly added layers were subjected to training. By doing so, we were able to leverage the pre-trained VGG model's learned features while fine-tuning the specific layers necessary for our task.
 
@@ -26,20 +31,20 @@ This last fully connected layer was replaced with the layers we added to our mod
 Object detection algorithm that works by dividing an input image into a grid and making predictions about objects within each grid cell.
 The key idea behind YOLO is to perform both object localization (finding the objects' positions) and classification (assigning labels to the objects) in a single pass through a convolutional neural network (CNN). 
 This approach allows YOLO to achieve real-time object detection with impressive speed and accuracy.
-* photo
-  
-source : https://www.datacamp.com/blog/yolo-objec 1 
 
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b6394a1d-dbcc-48c4-a11f-0e96cca337dc)
+  
 We used the YOLOv8 version in which designed to be fast, accurate, and easy to use.
-* photo 
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/90deb6cd-2057-4031-8838-45ec06720a56)
 
 # Confusion matrix
 A Confusion matrix is an N x N matrix used for evaluating the performance of a classification model.
 A confusion matrix is a tabular summary of the number of correct and incorrect predictions made by a classifier. 
 It can be used to evaluate the performance of a classification model through the calculation of performance metrics like accuracy, precision, recall, and F1-score.
 We use the confusion matrix to see the prediction results of our model on our dataset. Eventually it helps us to see that we have imbalanced dataset and to get some conclusions on how to move on and improve the model.
-* photo
-  
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5bc9d91e-a8a2-4107-82ce-4cc506842dfc)
+
 source :  https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5
 * F-measure/F1-score: The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall. F1 score sort of maintains a balance between the precision and recall for your classifier.
 F1=2⋅(precision⋅recall)/(precision+recall)=(2⋅TP)/(2TP+(FP+FN))
@@ -49,24 +54,36 @@ A method in which we use RGB to detect movement.
 The images considered as input are three consecutive grayscale images (obtained by converting video frames from RGB to grayscale). 
 By putting the three images together (like in RGB method) we can detect movement:
 if we will see clear image, we will know that there wasn’t any movement. otherwise, if the image is blurry, there is probably a change between the images that can suggest that there was movement.
-* photo
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/f8570c15-efd7-4115-bc66-f9b7af9de9b5)
   
 source: https://www.nature.com/articles/s41598-023-41774-2
 
-# The dataset:
+# The dataset
 Our data set includes 662 labeled videos (few seconds each), divided to 8 different groups (resting, sitting, walking, standing (each contains 2 groups, on the floor and on the bench)). After converting the videos into images, we've got 361,502 images.
-* photo
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/470ef022-9980-4724-8431-7d78f5737931)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/a048c015-bd42-4215-92c7-66b87f8314d8)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/e1145616-c3ee-4a40-86a3-8b76b2791b20)
+
 # The Process 
 Our initial step involved converting our video data into images.
 We utilized YOLOv3, an object detection framework, to isolate and crop the dog from each image. YOLO, which stands for "You Only Look Once," employs a deep convolutional neural network to detect objects within images. Unfortunately, both YOLOv3 and YOLOv8 couldn't detect the dog in the images (we assume that it's because our data set is dogs behind bars, which coco128 aren't familiar with).
 To address this issue, we manually cropped images from our dataset that showcased dogs behind bars.
 We performed a brief training session on the "roboflow" platform and subsequently integrated the newly acquired data into our project code. We continued training the YOLOv8 model using this augmented dataset to improve its ability to detect dogs in the context of being behind bars.
 To enhance the accuracy of the model, we repeated the process of acquiring more data and fine-tuning the YOLOv8 model. This iterative approach aimed to provide the model with additional training examples and improve its performance in identifying dogs behind bars.
-* photo
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/16408961-b760-4fc2-a946-f17dbbb47c91)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5cb153a9-9dd4-4404-9801-58bb35844fdb)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ff1a5d19-1034-48d8-932a-ac184fcc78cb)
 
 Then, we downloaded our data to our python code and trained it with augmentations: noise- up to 3% of pixels and cutout- 5 boxes with 10% size each.
 Then we cropped the images using the bounding box.
-* photo
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b34fefb1-ec56-46f1-928f-9d993de06fa2)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/f1cfa9f4-4e14-49bd-8b2b-c3af080a7afc)
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/bbe646ce-a4f6-44fc-954c-7205a9d0e657)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/dc955760-7ce5-4ed3-97aa-08fda70dd24b)
 
 Following those steps, we obtained a dataset consisting of cropped and labeled images of dogs and divided our data into: training, testing and validation. These sets were essential for training and evaluating our model effectively.
 Our chosen model architecture is based on the pre-trained VGG19 network. 
@@ -78,8 +95,10 @@ During the process, we practiced and trained our model in various ways to achiev
 
 # First practice-overfit 
 After we built our net, we will see the loss function and accuracy results- at the end of the training:
-* photo
-  
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/2c2f6e27-ba5d-478b-a380-75005f580738)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/749f948c-1ade-435c-ae51-7e61d080bf49)
+
 Running our model on the test images gives us the accuracy of 96.435%.
 We have identified overfitting in our model. 
 We believe that this issue arises from our data splitting approach, where we divided the data into training, validation, and test sets based on individual frames.
@@ -87,63 +106,140 @@ Since each video contains numerous similar frames, there is a significant likeli
 
 To fix the overfit, we split the data by video and not randomly by images.
 
+# Second practice- unbalanced data 
 
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/db1fa25c-fe48-4865-8b18-71460a284df6)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ba50834c-f2a9-47ad-adf1-cfbe1c05f384)
 
+Running our model on the test images gives us the accuracy of 94.899%.
 
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/e874fb7d-e0ae-48e2-a66f-da0c5aa21d7d)
 
+Here, we have valuable insights into our model and its performance. It's evident that the unbalanced nature of our data is impacting our model's training
+This is apparent because there are approximately 49,000 images in class 0, no images in class 1, 21,000 in class 2, and 2,700 in class 3 for the test dataset.
+As a result, the model tends to favor predictions in favor of class 0, leading to a high probability of correct predictions within our current data distribution.
+To address this issue, we have made the decision to balance our data using undersampling. 
 
-**model test accuuracy after adding **gaussian noise**: 80.532**
+Undersampling is a technique to balance uneven datasets by keeping all the data in the minority class and decreasing the size of the majority class. It is one of several techniques data scientists can use to extract more accurate information from originally imbalanced datasets.
 
-![image](https://github.com/hadarshloosh/DL-project/assets/129359070/f4583817-f1af-44ae-9db0-f4a21fd5ab7f)
+Additionally, given that our model lacks sufficient data to effectively recognize when a dog is in a sitting position (class 1), we have chosen not to include this class in our dataset.
+To determine how many images to extract from each video (i.e., how many seconds of video to utilize) to achieve a balanced dataset, we have created a histogram of the number of images per video.
+This histogram reveals that most of our videos contain fewer than 500 images each.
 
-**model test accuuracy after adding **augmantation**: 80.904599%**
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5b505faf-a799-4922-aae4-fab40012823d)
 
-After few different combination, we understood that the best one is to use only the colorjitter (which make sence since randomaffine applies a combination of affine transformations to an image, including rotation, translation, shearing, and scaling. And Random perspective augmentation applies a projective transformation to an image, distorting its perspective by warping the image pixels. which is important in our data.
+# Third practice- under sampling the data and without sitting 
 
-here is an example for one runing with all 3 augmantations:
+We chose to take 100 images for each video, for 327 videos each class with 109 videos.
 
-![image](https://github.com/hadarshloosh/DL-project/assets/129359070/6545abb4-e3d2-4dfa-b974-a9b536b5980e)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/1e1f8de8-44b6-4fe4-89fd-64d95c0a9007)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/d9c079b5-6d59-40c7-8014-e787f1021829)
 
-# Our hand images test-set
-After we trained our model to a “good enough” accuracy, we decided to try the model with our own images as a test set
-We picture 3 different people with different features (nail paint, hand size, jewelry act.)
-Because you can “speak” ASL with both you right and left hands, we also made one set with left hand
-In the result we can see that the result are not that good, we tried to see if its “almost” correct by seeing top 3 cases of the prediction and saw that its wasn’t the case.
-A good future work is to try to figure what our model was focused on while predicting the test set.
+Running our model on the test images gives us the accuracy of 84.188%.
 
-![image](https://github.com/hadarshloosh/DL-project/assets/129359070/2c2e8a6a-96a6-41c7-bce4-68fbae6dfdf9)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/8d4cb890-b0bb-4766-9831-7c415d94ae4b)
 
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5035d540-8c7c-46d8-8adc-af628a38324c)
 
+We can observe an improvement in the F1 score, but there remains some confusion between walking and standing. To address this issue, we will use grayST to detect any movement within the video frames. By capturing a clear, unblurred image, we can confidently classify it as "standing." Conversely, if we detect a blurred image, we can classify it as "walking."
 
-# Usage
-1.	Download asl dataset and put in /datasets/asl
-2.	Run our code in any pyton support machine. (make sure you write the right adrees to you drive)
-3.	Add your hand images to the drive and copy his path to the code
-4.	Try to see if the model can translate your name.
-5.	See the accuracy at the result.
+For instance, when examining an image labeled as "resting":
 
-# Future work
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/1088da74-a4b6-4a4e-9578-cfd61f667b88)
 
-if you want to use and improve our model here some ideas
+And for walking label we can see blur, unclear image due to the movement of the dog.
 
-1. Improve the test accuracy by changing some of the hyper parameters and more augmentation.
-2. using this model as a part of a larges net which also include translation into a different language (for example it can be use in order to let people that speaks different language to be able to communicate).
-3. use this model in order to translate words and sentences.
-4. build a model that can "translate" from video (clip the video into picture and the use our model/ use yolo, ect..)
-5. you can use this model to use it in different image prossesing and labeling as you wish. (remeber to change the num class, the data+label) 
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ef027b9e-564b-4f5e-a57e-5880211cd0cc)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/eef0c485-e2fa-47ab-b364-cc7e56bc4ebf)
+
+# Fourth practice- GrayST
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/6091fb30-a4ab-48b6-8c6a-62bc95db6dfb)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/be1d0d8e-98e9-4e1a-a64d-57d98ccd8150)
+
+Running our model on the test images gives us the accuracy 92.198%.
+We can see that even that the input data is smaller than the original (9337 images), we can get good score for the test.
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/085920b3-195d-42ee-8825-004fea607fc5)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/74543ab0-769a-4832-b299-c6912e231d12)
+
+As we can see, there is an improvement at the score.
+
+After training the model on our data, we now want to obtain a prediction for each video. We created a table that processes the video frame by frame, using the model to generate predictions for each image. Subsequently, we select the prediction with the highest score, which corresponds to the one with the most images that were labeled and assign that prediction to the video.
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/bf9c2f6f-00e8-43e3-97c2-376ae641545d)
+
+Running our model on the test video gives us the accuracy 78.78%.
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b8829b18-d124-4c89-87dd-5dab676487f0)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b5adb75c-d839-41ff-98fb-2b890ff37466)
+
+For comparison, this is the confusion matrix before implementing GrayST.
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/81410873-da03-4c7f-8e93-edd7f3c64094)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/d40eb3c0-00e1-4478-a1c3-615ad60af6fc)
+
+As we saw during the process, we got better results (F1) after grayST then before it. 
+We expected that the results of F1 after GrayST will be improved and as expected we got this result.
+# Conclusion 
+In our project, we aimed to predict dog behavior based on video data.
+1.	Initially, we observed that using YOLO as an object detection tool on our dataset was challenging because the dogs were behind bars. Consequently, we learned that we could use a custom YOLO model for specific detection.
+2.	After training the model on our dataset for a while, we realized that splitting the data into training, validation, and test sets needed to be done per video, rather than per image. This adjustment was necessary to prevent overfitting in our model.
+3.	Recognizing the dataset's structure and the number of samples in each class is crucial for achieving good results with our model. Before training the model once again, we ensured that our dataset was balanced to avoid any preference for a specific class. To achieve this, we learned how to perform under-sampling.
+4.	Using grayST method to deal with the confusion in prediction between two classes. 
+5.	Finally predicting each video by using the majority vote of all the images within that video. This approach leads to a result of 78.78 % on the test set in the video dataset. 
+
+# What we have learned
+During our project we have learned many important skills such as:
+-	About YOLO and in particular YOLOv8 and how to use it
+-	YOLO customize (using roboflow)
+-	Creating an efficient preprocessing class for our dataset
+-	Many different writing code skills in python
+-	Fine- tuning and VGG19
+-	Writing a net 
+-	GrayST
+-	Undersampling
+-	The effect of unbalanced data and ways to deal with it.
+-	Confusion matrix
+-	Improving our net and trying to make it more robust.
+
+# Looking forward
+- Like every net, there Is always a place for improving the accuracy.
+
+- Label more images for the image detection to be more accurate and crop the dog correctly in more images from the data.
+
+- Train on larger dataset with many different videos (of different dogs), in particular more data of sitting. (Our data isn’t even).
+
+- Continue developing a system that monitoring the dogs' behavior and count each one of the dogs' activities during the day to check the dogs' natural behavior.
+
 
 # References:
+https://pyimagesearch.mykajabi.com 
 
-We took our dataset from:
+confusion matrix: https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5
 
-https://www.kaggle.com/datasets/mrgeislinger/asl-rgb-depth-fingerspelling-spelling-it-out?resource=download
+https://towardsai.net/p/l/multi-class-model-evaluation-with-confusion-matrix-and-classification-report
 
-The pretrain model we took from VGG19: https://www.kaggle.com/code/brussell757/american-sign-language-classification/input
+https://medium.com/analytics-vidhya/confusion-matrix-accuracy-precision-recall-f1-score-ade299cf63cd
 
-The keras model we took from:
-https://www.kaggle.com/code/brussell757/american-sign-language-classification
+https://medium.com/synthesio-engineering/precision-accuracy-and-f1-score-for-multi-label-classification-34ac6bdfb404
 
-Link to our model : "https://drive.google.com/file/d/1Pkp5q2ji-ARcgkGxFlcMvIbT0nxzACyE/view?usp=sharing"
-We also use many of the code and data that in the course material 
+https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62 
+
+YOLOv8:  https://www.datacamp.com/blog/yolo-objec 
+
+https://blog.roboflow.com/whats-new-in-yolov8/
+
+https://blog.roboflow.com/how-to-train-yolov8-on-a-custom-dataset/ 
+
+https://docs.ultralytics.com/ 
+
+VGG19:  https://www.researchgate.net/figure/Illustration-of-fine-tuned-VGG19-pre-trained-CNN-model_fig1_342815128
+
+Augmentation: https://www.tasq.ai/glossary/augmentation/
+
+grayST: https://www.nature.com/articles/s41598-023-41774-2
+https://bmvc2022.mpi-inf.mpg.de/0355.pdf
+
 
 

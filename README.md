@@ -81,11 +81,11 @@ To enhance the accuracy of the model, we repeated the process of acquiring more 
 Then, we downloaded our data to our python code and trained it with augmentations: noise- up to 3% of pixels and cutout- 5 boxes with 10% size each.
 Then we cropped the images using the bounding box.
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b34fefb1-ec56-46f1-928f-9d993de06fa2)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/f1cfa9f4-4e14-49bd-8b2b-c3af080a7afc)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5b7313f6-4d6f-4722-aaad-746bcf16ec5d)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ac8d7a2e-38d6-4d69-800e-90feac6d8b9d)
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/bbe646ce-a4f6-44fc-954c-7205a9d0e657)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/dc955760-7ce5-4ed3-97aa-08fda70dd24b)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/c7c00763-4c8d-456c-a875-9f011cf0e327)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5f78a88d-2b32-46cb-9ab4-31ed0afd2d5b)
 
 Following those steps, we obtained a dataset consisting of cropped and labeled images of dogs and divided our data into: training, testing and validation. These sets were essential for training and evaluating our model effectively.
 Our chosen model architecture is based on the pre-trained VGG19 network. 

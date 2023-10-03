@@ -39,6 +39,7 @@ A confusion matrix is a tabular summary of the number of correct and incorrect p
 It can be used to evaluate the performance of a classification model through the calculation of performance metrics like accuracy, precision, recall, and F1-score.
 We use the confusion matrix to see the prediction results of our model on our dataset. Eventually it helps us to see that we have imbalanced dataset and to get some conclusions on how to move on and improve the model.
 * photo
+  
 source :  https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5
 * F-measure/F1-score: The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall. F1 score sort of maintains a balance between the precision and recall for your classifier.
 F1=2⋅(precision⋅recall)/(precision+recall)=(2⋅TP)/(2TP+(FP+FN))
@@ -55,13 +56,29 @@ source: https://www.nature.com/articles/s41598-023-41774-2
 # The dataset:
 Our data set includes 662 labeled videos (few seconds each), divided to 8 different groups (resting, sitting, walking, standing (each contains 2 groups, on the floor and on the bench)). After converting the videos into images, we've got 361,502 images.
 * photo
+# The Process 
+Our initial step involved converting our video data into images.
+We utilized YOLOv3, an object detection framework, to isolate and crop the dog from each image. YOLO, which stands for "You Only Look Once," employs a deep convolutional neural network to detect objects within images. Unfortunately, both YOLOv3 and YOLOv8 couldn't detect the dog in the images (we assume that it's because our data set is dogs behind bars, which coco128 aren't familiar with).
+To address this issue, we manually cropped images from our dataset that showcased dogs behind bars.
+We performed a brief training session on the "roboflow" platform and subsequently integrated the newly acquired data into our project code. We continued training the YOLOv8 model using this augmented dataset to improve its ability to detect dogs in the context of being behind bars.
+To enhance the accuracy of the model, we repeated the process of acquiring more data and fine-tuning the YOLOv8 model. This iterative approach aimed to provide the model with additional training examples and improve its performance in identifying dogs behind bars.
+* photo
+
+Then, we downloaded our data to our python code and trained it with augmentations: noise- up to 3% of pixels and cutout- 5 boxes with 10% size each.
+Then we cropped the images using the bounding box.
+* photo
+
+Following those steps, we obtained a dataset consisting of cropped and labeled images of dogs and divided our data into: training, testing and validation. These sets were essential for training and evaluating our model effectively.
+Our chosen model architecture is based on the pre-trained VGG19 network. 
+After that we used under sampling and grayST techniques in order to deal with the imbalanced data and the results that we saw on the confusion matrix between standing and walking prediction.
+Our last step was to make predictions for each video.
 
 # results
+During the process, we practiced and trained our model in various ways to achieve the best results and create the most suitable classification network for our project's goals.
 
-We tried to train out data with different hyper parameters in order to get to the best accuracy on the test set
-(We also tried different hyper parameter such as adding schedular (multi step learning rate) and changing the epoch number, or the batch size, but the result weren’t as good as our final submission.
-
-For example, here we have reached 77.193% validation accuracy )
+# First practice-overfit 
+After we built our net, we will see the loss function and accuracy results- at the end of the training:
+* photo
 
 
 ![image](https://github.com/hadarshloosh/DL-project/assets/129359070/aad74286-740a-4d6e-98ef-fa4457833c01)

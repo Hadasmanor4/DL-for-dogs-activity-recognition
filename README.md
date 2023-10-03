@@ -93,8 +93,11 @@ Then we cropped the images using the bounding box.
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/5f78a88d-2b32-46cb-9ab4-31ed0afd2d5b)
 
 Following those steps, we obtained a dataset consisting of cropped and labeled images of dogs and divided our data into: training, testing and validation. These sets were essential for training and evaluating our model effectively.
+
 Our chosen model architecture is based on the pre-trained VGG19 network. 
+
 After that we used under sampling and grayST techniques in order to deal with the imbalanced data and the results that we saw on the confusion matrix between standing and walking prediction.
+
 Our last step was to make predictions for each video.
 
 # results

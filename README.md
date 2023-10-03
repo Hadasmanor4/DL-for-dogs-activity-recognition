@@ -200,6 +200,24 @@ In our project, we aimed to predict dog behavior based on video data.
 4.	Using grayST method to deal with the confusion in prediction between two classes. 
 5.	Finally predicting each video by using the majority vote of all the images within that video. This approach leads to a result of 78.78 % on the test set in the video dataset. 
 
+# Explanation of our code
+During our code writing we wrote many different functions, in this section we will provide a short explanation of each one-of them:
+
+Video_analyze: converting video into images (by each frame)
+
+We used Roboflow to tag our images of dogs behind bars into classifications of dogs. We employed YOLOv8 to train our custom data from Roboflow. Next, we predicted the results of YOLOv8, which we trained on a sample of our dataset, and cropped the images according to the bounding boxes of the classifications. To make it easier to use the labels of each image, we organized the folder names in a more convenient way. Subsequently, we ran the custom YOLO on the entire dataset and obtained the cropped images of the dog's classification.
+
+Afterward, we aimed to use the pretrained VGG19 model on our cropped images to classify them into four classes: resting, sitting, standing, and walking. First, we organized the videos into a list. Then, we divided the list of videos into training (60%), testing (20%), and validation (20%).
+
+Following that, we created a class for the dataset to facilitate access to all the images and extract the labels of each image according to an integer mapping. Additionally, we created different classes before and after applying the grayST, enabling us to compare results with or without the grayST transformation. We used the class to generate the training, validation, and test datasets based on the video split.
+
+Later on, we created the 'build_model' function to utilize the pretrained VGG19 model. We replaced only the last layer in the VGG19 network and added linear, batch normalization, and dropout layers. To evaluate the classification results, we used the 'calculate_accuracy' function, which takes the dataloader and calculates predictions for each photo. By comparing these predictions to the photo's label, it computes the accuracy of the model and generates a confusion matrix.
+
+During training, we saved the model at each iteration as checkpoints. Ultimately, to assess the model's performance on the test set, we used the best model with the highest validation accuracy obtained during training. We calculated the test accuracy and generated a confusion matrix per image.
+
+In the next phase of our project, we aimed to make predictions at the video level. We evaluated video predictions on the test dataset, creating a chart for each video containing the video's label and the count of photos in each class. By using majority vote, we determined the class with the highest number of photos and made predictions for the video. We also constructed a confusion matrix for the video predictions.
+
+
 # What we have learned
 During our project we have learned many important skills such as:
 -	About YOLO and in particular YOLOv8 and how to use it

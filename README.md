@@ -1,9 +1,9 @@
 # DL-for-dogs-activity-recognition
 **Hadar Shloosh and Hadas Manor's project about dogs' activity recognition using DL**
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b8cdad60-957c-4bc4-a8e5-5a2a8e195df6)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b1e3c946-eb01-4beb-b7b4-623b570e4ed4)
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/0800814c-5795-4b45-a30d-056515bc89a5)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/680bc7bf-4558-458b-b575-d4f959b469b4)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/642aef07-1125-453c-9c7a-2e8b8afe567b)
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/863e63df-877b-4990-b02f-03af2e00e1b9)
 
 # Introduction 
 Adopting dogs from animal shelters plays a crucial role in addressing multiple societal and ethical concerns.

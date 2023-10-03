@@ -1,7 +1,8 @@
 # DL-for-dogs-activity-recognition
 **Hadar Shloosh and Hadas Manor's project about dogs' activity recognition using DL**
 
-![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/680bc7bf-4558-458b-b575-d4f959b469b4)
+
+![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/680bc7bf-4558-458b-b575-d4f959b469b4) 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/642aef07-1125-453c-9c7a-2e8b8afe567b)
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/863e63df-877b-4990-b02f-03af2e00e1b9)
 

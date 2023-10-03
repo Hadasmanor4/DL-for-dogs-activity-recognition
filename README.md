@@ -27,6 +27,7 @@ Object detection algorithm that works by dividing an input image into a grid and
 The key idea behind YOLO is to perform both object localization (finding the objects' positions) and classification (assigning labels to the objects) in a single pass through a convolutional neural network (CNN). 
 This approach allows YOLO to achieve real-time object detection with impressive speed and accuracy.
 * photo
+  
 source : https://www.datacamp.com/blog/yolo-objec 1 
 
 We used the YOLOv8 version in which designed to be fast, accurate, and easy to use.
@@ -48,6 +49,7 @@ The images considered as input are three consecutive grayscale images (obtained 
 By putting the three images together (like in RGB method) we can detect movement:
 if we will see clear image, we will know that there wasn’t any movement. otherwise, if the image is blurry, there is probably a change between the images that can suggest that there was movement.
 * photo
+  
 source: https://www.nature.com/articles/s41598-023-41774-2
 
 # The dataset:

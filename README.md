@@ -43,6 +43,7 @@ We used the YOLOv8 version in which designed to be fast, accurate, and easy to u
 A Confusion matrix is an N x N matrix used for evaluating the performance of a classification model.
 A confusion matrix is a tabular summary of the number of correct and incorrect predictions made by a classifier. 
 It can be used to evaluate the performance of a classification model through the calculation of performance metrics like accuracy, precision, recall, and F1-score.
+
 We use the confusion matrix to see the prediction results of our model on our dataset. Eventually it helps us to see that we have imbalanced dataset and to get some conclusions on how to move on and improve the model.
 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/1c673abb-952c-4d37-825e-602b5cec3ff1)

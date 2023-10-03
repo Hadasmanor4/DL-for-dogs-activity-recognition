@@ -4,7 +4,7 @@
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b8cdad60-957c-4bc4-a8e5-5a2a8e195df6)
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/b1e3c946-eb01-4beb-b7b4-623b570e4ed4)
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/0800814c-5795-4b45-a30d-056515bc89a5)
-
+c
 # Introduction 
 Adopting dogs from animal shelters plays a crucial role in addressing multiple societal and ethical concerns.
 It aids in curbing the issue of pet overpopulation by providing homes to dogs that might otherwise contribute to the strain on shelter resources or face the risk of euthanasia due to lack of space.

@@ -55,7 +55,7 @@ F1=2⋅(precision⋅recall)/(precision+recall)=(2⋅TP)/(2TP+(FP+FN))
 # Gray short term (GrayST) 
 A method in which we use RGB to detect movement. 
 The images considered as input are three consecutive grayscale images (obtained by converting video frames from RGB to grayscale). 
-By putting the three images together (like in RGB method) we can detect movement:
+By putting the three images together (like in RGB method) we can detect movement.
 if we will see clear image, we will know that there wasn’t any movement. otherwise, if the image is blurry, there is probably a change between the images that can suggest that there was movement.
 
 ![image](https://github.com/Hadasmanor4/DL-for-dogs-activity-recognition/assets/137258791/ff701596-2667-46f6-8f48-5cdc415a710c)
